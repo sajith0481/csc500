@@ -58,19 +58,28 @@
 # print("The average of the positive numbers is:", avg)
 
 # Guess the number
-import random
-n = random.randint(1, 100)
-print("The random number is:", n)
-guess = int(input("Enter your guess (1-100): "))
-while n != guess:
-    if guess < n:
-        print("Your guess is too low.")
-        guess = int(input("Enter your guess (1-100): "))
-    elif guess > n:
-        print("Your guess is too high.")
-        guess = int(input("Enter your guess (1-100): "))
-    else:
-        print("Congratulations! You guessed the correct number.")
-        break
-    print()
+# import random
+# n = random.randint(1, 100)
+# print("The random number is:", n)
+# guess = int(input("Enter your guess (1-100): "))
+# while n != guess:
+#     if guess < n:
+#         print("Your guess is too low.")
+#         guess = int(input("Enter your guess (1-100): "))
+#     elif guess > n:
+#         print("Your guess is too high.")
+#         guess = int(input("Enter your guess (1-100): "))
+#     else:
+#         print("Congratulations! You guessed the correct number.")
+#         break
+#     print()
+
+# nested loop to print patterns
+# row = 7
+# # outer loop
+# for i in range(1, row + 1):
+#     # inner loop
+#     for j in range(1, i + 1):
+#         print("*", end=' ')
+#     print("")
 
