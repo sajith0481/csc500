@@ -18,4 +18,4 @@ average_rainfall = total_rainfall / num_months
 # Display results
 print(f"Number of months: {num_months}")
 print(f"Total inches of rainfall: {total_rainfall}")
-print(f"Average rainfall per month: {average_rainfall:.2f}")
+print(f"Average rainfall per month in inches: {average_rainfall:.2f}")
