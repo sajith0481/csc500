@@ -23,13 +23,13 @@ class ShoppingCart:
     Represents a shopping cart.
     """
 
-    def __init__(self, customer_name="none", current_date="January 1, 2020"):
+    def __init__(self, customer_name="none", current_date="May 24, 2024"):
         """
         Initializes a ShoppingCart object with the given attributes.
 
         Parameters:
         - customer_name (str): The name of the customer (default is "none").
-        - current_date (str): The current date (default is "January 1, 2020").
+        - current_date (str): The current date (default is "May 24, 2024").
         """
         self.customer_name = customer_name
         self.current_date = current_date
