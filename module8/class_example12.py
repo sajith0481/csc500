@@ -18,4 +18,4 @@ tricia = Employee('Tricia', wage=12.50, hours=40)  # Manager employee
 employees = [todd, jason, tricia]
 
 for e in employees:
-    print ('{} earns {:.2f} per week'.format(e.name, e.wage*e.hours))
+    print('{} earns {:.2f} per week'.format(e.name, e.wage*e.hours))
