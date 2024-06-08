@@ -166,7 +166,6 @@ Choose an option: """
             new_quantity = int(input("Enter the new quantity: "))
             cart.modify_item(item_name, new_quantity=new_quantity)
 
-
         elif choice == 'i':
             # Output items' descriptions
             print("OUTPUT ITEMS' DESCRIPTIONS")
