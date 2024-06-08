@@ -60,23 +60,18 @@ class ShoppingCart:
         if not item_found:
             print("Item not found in cart. Nothing removed.")
 
-    def modify_item(self, ItemToPurchase):
-        """
-        Modifies an item in the shopping cart.
-
-        Parameters:
-        - ItemToPurchase (ItemToPurchase): The modified item.
-        """
+    def modify_item(self, item_name, new_description=None, new_price=None, new_quantity=None):
         item_found = False
         for item in self.cart_items:
-            if item.name == ItemToPurchase.name:
-                if ItemToPurchase.description != "none":
-                    item.description = ItemToPurchase.description
-                if ItemToPurchase.price != 0:
-                    item.price = ItemToPurchase.price
-                if ItemToPurchase.quantity != 0:
-                    item.quantity = ItemToPurchase.quantity
+            if item.name == item_name:
+                if new_description is not None:
+                    item.description = new_description
+                if new_price is not None:
+                    item.price = new_price
+                if new_quantity is not None:
+                    item.quantity = new_quantity
                 item_found = True
+                print(f"Item '{item_name}' updated.")
                 break
         if not item_found:
             print("Item not found in cart. Nothing modified.")
@@ -166,20 +161,10 @@ Choose an option: """
             cart.remove_item(item_name)
 
         elif choice == 'c':
-            # Change item quantity
             print("CHANGE ITEM QUANTITY")
             item_name = input("Enter the item name: ")
-            quantity = int(input("Enter the new quantity: "))
-            # Find the item to update
-            item_found = False
-            for item in cart.cart_items:
-                if item.name == item_name:
-                    modified_item = ItemToPurchase(item_name, item.price, quantity, item.description)
-                    cart.modify_item(modified_item)
-                    item_found = True
-                    break
-            if not item_found:
-                print("Item not found in cart. Nothing modified.")
+            new_quantity = int(input("Enter the new quantity: "))
+            cart.modify_item(item_name, new_quantity=new_quantity)
 
         elif choice == 'i':
             # Output items' descriptions
